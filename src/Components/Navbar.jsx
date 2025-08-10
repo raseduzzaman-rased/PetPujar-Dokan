@@ -12,7 +12,7 @@ const Navbar = () => {
       </div>
 
       {/* middle search section */}
-      <form className="bg-white w-[70%] h-[60px] px-5 rounded-md shadow-md flex justify-center items-center gap-3">
+      <form className="bg-white w-[50%] md:w-[70%] h-[60px] px-5 rounded-md shadow-md flex justify-center items-center gap-3">
         <FaSearch className="text-green-500 w-[20px] h-[20px]" />
         <input
           placeholder="Search here....."
