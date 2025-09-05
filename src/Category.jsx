@@ -12,34 +12,34 @@ const Categories = [
   },
   {
     id: 2,
-    name: "Breakfast",
+    name: "breakfast",
     icon: (
       <MdOutlineFreeBreakfast className="w-[50px] h-[50px] text-green-500" />
     ),
   },
   {
     id: 3,
-    name: "Soup",
+    name: "soups",
     icon: <TbSoup className="w-[50px] h-[50px] text-green-500" />,
   },
   {
     id: 4,
-    name: "Pasta",
+    name: "pasta",
     icon: <CiBowlNoodles className="w-[50px] h-[50px] text-green-500" />,
   },
   {
     id: 5,
-    name: "Sandwidch",
+    name: "main_course",
     icon: <MdOutlineFoodBank className="w-[50px] h-[50px] text-green-500" />,
   },
   {
     id: 6,
-    name: "Pizza",
+    name: "pizza",
     icon: <GiFullPizza className="w-[50px] h-[50px] text-green-500" />,
   },
   {
     id: 7,
-    name: "Burger",
+    name: "burger",
     icon: <GiHamburger className="w-[50px] h-[50px] text-green-500" />,
   },
 ];
