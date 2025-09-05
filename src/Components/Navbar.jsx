@@ -24,7 +24,10 @@ const Navbar = () => {
       </form>
 
       {/* cart icon right  */}
-      <div className="w-[60px] h-[60px] bg-white rounded-md shadow-xl flex justify-center items-center">
+      <div className="w-[60px] h-[60px] bg-white rounded-md shadow-xl flex justify-center items-center relative">
+        <span className="absolute top-0 right-2 text-green-500 font-bold text-[18px]">
+          0
+        </span>
         <RiShoppingBag3Line className="w-[30px] h-[30px] text-green-500" />
       </div>
     </div>

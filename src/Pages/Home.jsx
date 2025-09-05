@@ -1,12 +1,23 @@
-import React from 'react';
-import Navbar from '../Components/Navbar';
+import React from "react";
+import Navbar from "../Components/Navbar";
+import Categories from "../Category";
 
 const Home = () => {
-    return (
-        <div className='bg-slate-200 w-full min-h-screen'>
-            <Navbar></Navbar>
-        </div>
-    );
+  return (
+    <div className="bg-slate-200 w-full min-h-screen">
+      <Navbar></Navbar>
+      <div className="flex flex-wrap justify-center items-center gap-4 w-full">
+        {Categories.map((item) => {
+          return (
+            <div className="w-[125px] h-[130px] bg-white flex flex-col items-start gap-5 p-5 justify-start  font-semibold text-gray-600 rounded-md shadow-lg hover:bg-green-200 cursor-pointer transition-all duration-200">
+              {item.icon}
+              {item.name}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default Home;
