@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { IoFastFood } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
 import { RiShoppingBag3Line } from "react-icons/ri";
+import { DataContext } from "../context/UserContext";
+import { food_items } from "../food";
 
 const Navbar = () => {
+  let { input, setInput, cate, setCate } = useContext(DataContext);
+  useEffect(() => {
+    let newList = food_items.filter((item) =>
+      item.food_name.toLowerCase().includes(input)
+    );
+    setCate(newList);
+  }, [input]);
+
   return (
     <div className="w-full h-[100%] p-8 flex justify-between items-center">
       {/* logo icon left  */}
@@ -12,7 +22,10 @@ const Navbar = () => {
       </div>
 
       {/* middle search section */}
-      <form className="bg-white w-[50%] md:w-[70%] h-[60px] px-5 rounded-md shadow-md flex justify-center items-center gap-3">
+      <form
+        className="bg-white w-[50%] md:w-[70%] h-[60px] px-5 rounded-md shadow-md flex justify-center items-center gap-3"
+        onSubmit={(e) => e.preventDefault()}
+      >
         <FaSearch className="text-green-500 w-[20px] h-[20px]" />
         <input
           placeholder="Search here....."
@@ -20,6 +33,8 @@ const Navbar = () => {
           name=""
           id=""
           className="w-full outline-none text-[20px]"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
         />
       </form>
 
