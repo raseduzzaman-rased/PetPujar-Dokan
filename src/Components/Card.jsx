@@ -3,12 +3,23 @@ import { LuLeafyGreen } from "react-icons/lu";
 import { GiChickenOven } from "react-icons/gi";
 import { DataContext } from "../context/UserContext";
 import { toast } from "react-toastify";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 const Card = ({id, name, image, price, type }) => {
   const { addToCart } = useContext(DataContext);
   const product = {id, food_name: name, food_image: image, price, food_type: type };
+
+  // scroll animation 
+  useEffect(() => {
+  AOS.init({ duration: 1000 });
+}, []);
+
+
   return (
     // Card Container
-    <div className="flex flex-col gap-4 w-[290px] h-[400px] bg-white p-3 rounded-lg shadow-lg hover:border-green-300 hover:border-2">
+    <div data-aos="fade-up" className="flex flex-col gap-4 w-[290px] h-[400px] bg-white p-3 rounded-lg shadow-lg hover:border-green-300 hover:border-2">
       {/* Card image section  */}
       <div className="w-[100%] h-[70%] overflow-hidden rounded-lg">
         <img

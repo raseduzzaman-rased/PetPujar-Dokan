@@ -6,6 +6,9 @@ import { food_items } from "../food";
 import { DataContext } from "../context/UserContext";
 import { RxCross2 } from "react-icons/rx";
 import CartDrawer from "../Components/CartDrawer";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Home = () => {
   let { cate, setCate, showCart, setShowCart } = useContext(DataContext);
@@ -20,6 +23,11 @@ const Home = () => {
     }
 
   }
+
+//   Aso animation 
+  useEffect(() => {
+  AOS.init({ duration: 1000 });
+}, []);
 
   return (
     <div className="bg-slate-200 w-full min-h-screen">
@@ -41,7 +49,7 @@ const Home = () => {
       </div>
 
       {/* Card Section  */}
-      <div className=" w-full flex flex-wrap gap-4 px-5 justify-center items-center p-8">
+      <div data-aos="fade-up" className=" w-full flex flex-wrap gap-4 px-5 justify-center items-center p-8">
         {cate.map((item) => (
           <Card
             name={item.food_name}
