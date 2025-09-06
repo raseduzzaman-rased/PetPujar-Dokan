@@ -5,6 +5,7 @@ import Card from "../Components/Card";
 import { food_items } from "../food";
 import { DataContext } from "../context/UserContext";
 import { RxCross2 } from "react-icons/rx";
+import CartDrawer from "../Components/CartDrawer";
 
 const Home = () => {
   let { cate, setCate, showCart, setShowCart } = useContext(DataContext);
@@ -17,6 +18,7 @@ const Home = () => {
       );
       setCate(newList);
     }
+
   }
 
   return (
@@ -52,17 +54,12 @@ const Home = () => {
       </div>
 
       <div
-        className={`w-[40vw] h-full fixed top-0 right-0 bg-white transition-all duration-500 shadow-xl p-6 ${
+        className={`w-full md:w-[40vw] h-full fixed top-0 right-0 bg-white transition-all duration-500 shadow-xl p-6 ${
           showCart ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <header className="w-full flex justify-between items-center p text-green-400 text-[18px] font-semibold">
-          <span>Order Items </span>
-          <RxCross2
-            className="w-[20px] h-[20px] text-[22px] cursor-pointer hover:text-gray-600"
-            onClick={() => setShowCart(false)}
-          />
-        </header>
+        {showCart && <CartDrawer/>}
+        
       </div>
     </div>
   );

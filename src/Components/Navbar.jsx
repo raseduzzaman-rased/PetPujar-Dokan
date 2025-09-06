@@ -6,8 +6,9 @@ import { DataContext } from "../context/UserContext";
 import { food_items } from "../food";
 
 const Navbar = () => {
-  let { input, setInput, setCate, showCart, setShowCart } =
+  let { input, setInput, setCate, setShowCart, cartItems } =
     useContext(DataContext);
+
   useEffect(() => {
     let newList = food_items.filter((item) =>
       item.food_name.toLowerCase().includes(input)
@@ -15,9 +16,12 @@ const Navbar = () => {
     setCate(newList);
   }, [input]);
 
+  // 🆕 total quantity calculate
+  const totalQty = cartItems.reduce((sum, item) => sum + item.qty, 0);
+
   return (
     <div className="w-full h-[100%] p-8 flex justify-between items-center">
-      {/* logo icon left  */}
+      {/* logo icon left */}
       <div className="w-[60px] h-[60px] bg-white rounded-md shadow-xl flex justify-center items-center">
         <IoFastFood className="w-[30px] h-[30px] text-green-500" />
       </div>
@@ -31,23 +35,22 @@ const Navbar = () => {
         <input
           placeholder="Search here....."
           type="text"
-          name=""
-          id=""
           className="w-full outline-none text-[20px]"
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
       </form>
 
-      {/* cart icon right  */}
+      {/* cart icon right */}
       <div
         className="w-[60px] h-[60px] bg-white rounded-md shadow-xl flex justify-center items-center relative cursor-pointer"
         onClick={() => {
           setShowCart(true);
         }}
       >
+        {/* 🆕 total quantity instead of length */}
         <span className="absolute top-0 right-2 text-green-500 font-bold text-[18px]">
-          0
+          {totalQty}
         </span>
         <RiShoppingBag3Line className="w-[30px] h-[30px] text-green-500" />
       </div>

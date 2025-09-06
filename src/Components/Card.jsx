@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { LuLeafyGreen } from "react-icons/lu";
 import { GiChickenOven } from "react-icons/gi";
-const Card = ({ name, image, price, type }) => {
+import { DataContext } from "../context/UserContext";
+import { toast } from "react-toastify";
+const Card = ({id, name, image, price, type }) => {
+  const { addToCart } = useContext(DataContext);
+  const product = {id, food_name: name, food_image: image, price, food_type: type };
   return (
     // Card Container
     <div className="flex flex-col gap-4 w-[290px] h-[400px] bg-white p-3 rounded-lg shadow-lg hover:border-green-300 hover:border-2">
@@ -24,8 +28,11 @@ const Card = ({ name, image, price, type }) => {
           <p>{type}</p>
         </div>
       </div>
-      <button className="w-full p-2 rounded-md bg-green-200 text-gray-500 hover:bg-green-500 hover:text-black transition-all mt-2">
-        Add to dish
+      <button  onClick={() => {
+        addToCart(product);
+        toast.success(`${name} Successfully Added to Cart`);
+      }} className="w-full p-2 rounded-md font-semibold bg-green-200 text-gray-500 hover:bg-green-500 hover:text-black transition-all mt-2">
+        Add to Cart
       </button>
     </div>
   );
