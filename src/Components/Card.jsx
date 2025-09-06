@@ -31,7 +31,7 @@ const Card = ({id, name, image, price, type }) => {
       <button  onClick={() => {
         addToCart(product);
         toast.success(`${name} Successfully Added to Cart`);
-      }} className="w-full p-2 rounded-md font-semibold bg-green-200 text-gray-500 hover:bg-green-500 hover:text-black transition-all mt-2">
+      }} className="w-full p-2 rounded-md font-semibold bg-green-200 text-gray-500 hover:bg-green-400 hover:text-black transition-all mt-2">
         Add to Cart
       </button>
     </div>
