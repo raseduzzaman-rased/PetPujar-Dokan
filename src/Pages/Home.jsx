@@ -9,6 +9,7 @@ import CartDrawer from "../Components/CartDrawer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import Footer from "../Components/Footer";
 
 const Home = () => {
   let { cate, setCate, showCart, setShowCart } = useContext(DataContext);
@@ -31,7 +32,7 @@ const Home = () => {
 
   return (
     <div className="bg-slate-200 w-full min-h-screen">
-      <Navbar></Navbar>
+   
 
       {/* Category section  */}
       <div className="flex flex-wrap justify-center items-center gap-4 w-full">
@@ -69,6 +70,7 @@ const Home = () => {
         {showCart && <CartDrawer/>}
         
       </div>
+    
     </div>
   );
 };

@@ -74,7 +74,7 @@ const CartDrawer = () => {
       </div>
 
       {/* Summary Section */}
-      <div className="mt- border-t pt-4">
+      <div className="mt- border-t pt-2">
         <div className="flex justify-between mb-2">
           <span className="text-gray-600">Subtotal</span>
           <span className="font-semibold">Taka {subtotal} /-</span>
