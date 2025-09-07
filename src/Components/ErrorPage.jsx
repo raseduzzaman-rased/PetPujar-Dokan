@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import Lottie from "lottie-react";
-import errorAnimation from "..//assets//404 error.json";
+import errorAnimation from "../animationData.json"
 
 const ErrorPage = () => {
   return (
@@ -12,7 +12,7 @@ const ErrorPage = () => {
 
       <div>
         {/* Text */}
-        <h1 className="text-3xl md:text-5xl font-bold text-red-600  mb-4">
+        <h1 className="text-3xl md:text-5xl font-bold text-green-400  mb-4">
           Oops!
         </h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-md">
@@ -22,7 +22,7 @@ const ErrorPage = () => {
         {/* Button */}
         <Link
           to="/"
-          className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-medium shadow-md transition"
+          className="bg-green-400 hover:bg-green-300 hover:text-black text-white px-6 py-3 rounded-md font-medium shadow-md transition"
         >
           Back to Home
         </Link>

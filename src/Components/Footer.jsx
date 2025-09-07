@@ -90,9 +90,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-gray-700">Contact Info</h3>
           <ul className="text-gray-800 text-sm space-y-2">
-            <li className="hover:text-green-500">📞 +880 1751 202 502</li>
-            <li className="hover:text-green-500">📧 info@foodie.com</li>
-            <li className="hover:text-green-500">📍 Dhaka, Bangladesh</li>
+            <li className="hover:text-green-500"> 📞 +880 1751 202 502</li>
+            <li className="hover:text-green-500"> 📧 info@petpujardokar.com</li>
+            <li className="hover:text-green-500"> 📍  Dhaka, Bangladesh</li>
+            <li className="hover:text-green-500"> 🕖 Mon-Fri 9am-5pm </li>
           </ul>
         </div>
 
@@ -110,7 +111,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded transition-colors"
+              className="bg-green-400 hover:bg-green-600 text-white px-3 py-2 rounded transition-colors"
             >
               <FaEnvelope />
             </button>

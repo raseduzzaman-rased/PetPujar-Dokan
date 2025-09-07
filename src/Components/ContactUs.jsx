@@ -3,8 +3,8 @@ import LottieAnimation from "./LottieAnimation";
 
 const ContactUs = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-200 py-12 px-4">
-      <div className="max-w-6xl w-full  grid grid-cols-1 md:grid-cols-2 overflow-hidden bg-white rounded-2xl shadow-2xl">
+    <div className="min-h-screen flex items-center justify-center bg-slate-200 pb-12 pt-4 px-4">
+      <div className="max-w-6xl w-full  grid grid-cols-1 md:grid-cols-2 overflow-hidden bg-white rounded-2xl shadow-xl">
         
         {/* Left Side (Lottie Animation placeholder) */}
         <div className="flex items-center justify-center  p-6">

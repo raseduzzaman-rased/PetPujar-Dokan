@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { RiShoppingBag3Line } from "react-icons/ri";
 import { DataContext } from "../context/UserContext";
 import { food_items } from "../food";
+import { Link } from "react-router";
 
 const Navbar = () => {
   let { input, setInput, setCate, setShowCart, cartItems } =
@@ -22,9 +23,11 @@ const Navbar = () => {
   return (
     <div className="w-full h-[100%] p-8 flex justify-between items-center">
       {/* logo icon left */}
+      <Link to='/'>
       <div className="w-[60px] h-[60px] bg-white rounded-md shadow-xl flex justify-center items-center">
         <IoFastFood className="w-[30px] h-[30px] text-green-500" />
       </div>
+      </Link>
 
       {/* middle search section */}
       <form
