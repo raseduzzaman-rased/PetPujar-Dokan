@@ -6,9 +6,9 @@ import { food_items } from "../food";
 import { DataContext } from "../context/UserContext";
 import { RxCross2 } from "react-icons/rx";
 import CartDrawer from "../Components/CartDrawer";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import Footer from "../Components/Footer";
 
 const Home = () => {
@@ -22,18 +22,15 @@ const Home = () => {
       );
       setCate(newList);
     }
-
   }
 
-//   Aso animation 
+  //   Aso animation
   useEffect(() => {
-  AOS.init({ duration: 1000 });
-}, []);
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     <div className="bg-slate-200 w-full min-h-screen">
-   
-
       {/* Category section  */}
       <div className="flex flex-wrap justify-center items-center gap-4 w-full">
         {Categories.map((item) => {
@@ -50,7 +47,10 @@ const Home = () => {
       </div>
 
       {/* Card Section  */}
-      <div data-aos="fade-up" className=" w-full flex flex-wrap gap-4 px-5 justify-center items-center p-8">
+      <div
+        data-aos="fade-up"
+        className=" w-full flex flex-wrap gap-4 px-5 justify-center items-center p-8"
+      >
         {cate.map((item) => (
           <Card
             name={item.food_name}
@@ -67,10 +67,8 @@ const Home = () => {
           showCart ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {showCart && <CartDrawer/>}
-        
+        {showCart && <CartDrawer />}
       </div>
-    
     </div>
   );
 };

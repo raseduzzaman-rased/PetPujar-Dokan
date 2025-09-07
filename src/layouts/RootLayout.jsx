@@ -3,16 +3,14 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Home from "../Pages/Home";
 
-
 const RootLayout = () => {
   return (
     <>
-    <div className="bg-slate-200">
+      <div className="bg-slate-200">
         <Navbar></Navbar>
-    </div>
+      </div>
       <Outlet />
       <Footer></Footer>
-   
     </>
   );
 };

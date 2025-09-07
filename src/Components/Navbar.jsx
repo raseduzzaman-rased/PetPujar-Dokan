@@ -17,16 +17,16 @@ const Navbar = () => {
     setCate(newList);
   }, [input]);
 
-  // 🆕 total quantity calculate
+  // total quantity calculate
   const totalQty = cartItems.reduce((sum, item) => sum + item.qty, 0);
 
   return (
     <div className="w-full h-[100%] p-8 flex justify-between items-center">
       {/* logo icon left */}
-      <Link to='/'>
-      <div className="w-[60px] h-[60px] bg-white rounded-md shadow-xl flex justify-center items-center">
-        <IoFastFood className="w-[30px] h-[30px] text-green-500" />
-      </div>
+      <Link to="/">
+        <div className="w-[60px] h-[60px] bg-white rounded-md shadow-xl flex justify-center items-center">
+          <IoFastFood className="w-[30px] h-[30px] text-green-500" />
+        </div>
       </Link>
 
       {/* middle search section */}
@@ -51,7 +51,7 @@ const Navbar = () => {
           setShowCart(true);
         }}
       >
-        {/* 🆕 total quantity instead of length */}
+        {/*  total quantity instead of length */}
         <span className="absolute top-0 right-2 text-green-500 font-bold text-[18px]">
           {totalQty}
         </span>

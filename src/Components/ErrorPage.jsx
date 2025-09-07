@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import Lottie from "lottie-react";
-import errorAnimation from "../animationData.json"
+import errorAnimation from "../animationData.json";
 
 const ErrorPage = () => {
   return (

@@ -4,7 +4,7 @@ import { food_items } from "../food";
 export const DataContext = createContext();
 
 const UserContext = ({ children }) => {
- const [input, setInput] = useState("");
+  const [input, setInput] = useState("");
   let [cate, setCate] = useState(food_items);
   let [showCart, setShowCart] = useState(false);
 
@@ -28,7 +28,6 @@ const UserContext = ({ children }) => {
   //  Remove from cart
   const removeFromCart = (id) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
-    
   };
 
   //  Update quantity
@@ -46,18 +45,17 @@ const UserContext = ({ children }) => {
   };
 
   // LocalStorage থেকে cart লোড করা
-useEffect(() => {
-  const savedCart = localStorage.getItem("cart");
-  if (savedCart) {
-    setCartItems(JSON.parse(savedCart));
-  }
-}, []);
+  useEffect(() => {
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+      setCartItems(JSON.parse(savedCart));
+    }
+  }, []);
 
-// Cart change হলে LocalStorage এ save করা
-useEffect(() => {
-  localStorage.setItem("cart", JSON.stringify(cartItems));
-}, [cartItems]);
-
+  // Cart change হলে LocalStorage এ save করা
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const data = {
     input,

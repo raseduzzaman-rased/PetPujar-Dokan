@@ -3,23 +3,32 @@ import { LuLeafyGreen } from "react-icons/lu";
 import { GiChickenOven } from "react-icons/gi";
 import { DataContext } from "../context/UserContext";
 import { toast } from "react-toastify";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
-const Card = ({id, name, image, price, type }) => {
+const Card = ({ id, name, image, price, type }) => {
   const { addToCart } = useContext(DataContext);
-  const product = {id, food_name: name, food_image: image, price, food_type: type };
+  const product = {
+    id,
+    food_name: name,
+    food_image: image,
+    price,
+    food_type: type,
+  };
 
-  // scroll animation 
+  // scroll animation
   useEffect(() => {
-  AOS.init({ duration: 1000 });
-}, []);
-
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     // Card Container
-    <div data-aos="fade-up" className="flex flex-col gap-4 w-[290px] h-[400px] bg-white p-3 rounded-lg shadow-lg hover:border-green-300 hover:border-2">
+    <div
+      id="categories"
+      data-aos="fade-up"
+      className="flex flex-col gap-4 w-[290px] h-[400px] bg-white p-3 rounded-lg shadow-lg hover:border-green-300 hover:border-2"
+    >
       {/* Card image section  */}
       <div className="w-[100%] h-[70%] overflow-hidden rounded-lg">
         <img
@@ -39,10 +48,13 @@ const Card = ({id, name, image, price, type }) => {
           <p>{type}</p>
         </div>
       </div>
-      <button  onClick={() => {
-        addToCart(product);
-        toast.success(`${name} Successfully Added to Cart`);
-      }} className="w-full p-2 rounded-md font-semibold bg-green-200 text-gray-500 hover:bg-green-400 hover:text-black transition-all mt-2">
+      <button
+        onClick={() => {
+          addToCart(product);
+          toast.success(`${name} Successfully Added to Cart`);
+        }}
+        className="w-full p-2 rounded-md font-semibold bg-green-200 text-gray-500 hover:bg-green-400 hover:text-black transition-all mt-2"
+      >
         Add to Cart
       </button>
     </div>

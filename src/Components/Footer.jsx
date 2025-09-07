@@ -1,9 +1,13 @@
 import React from "react";
 import { IoFastFood } from "react-icons/io5";
-import { FaFacebookF, FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaEnvelope,
+} from "react-icons/fa";
 import { Link } from "react-router";
 import { Typewriter } from "react-simple-typewriter";
-
 
 const Footer = () => {
   return (
@@ -14,27 +18,28 @@ const Footer = () => {
           <div className="flex items-center gap-2 mb-4">
             <IoFastFood className="w-8 h-8 text-green-500" />
             <span className="text-xl font-bold">
- <Typewriter
-        words={["PetPujar Dokan"]}
-        loop={true}
-        cursor
-        cursorStyle="|"
-        typeSpeed={70}
-        deleteSpeed={50}
-        delaySpeed={1000}
-      />
-
+              <Typewriter
+                words={["PetPujar Dokan"]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
             </span>
           </div>
           <p className="text-gray-600 text-sm">
-            Fresh and delicious food delivered to your doorstep. Explore a wide range of
-            categories and enjoy your favorite meals anytime!
+            Fresh and delicious food delivered to your doorstep. Explore a wide
+            range of categories and enjoy your favorite meals anytime!
           </p>
         </div>
 
         {/* Customer Services */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-gray-700">Customer Services</h3>
+          <h3 className="text-lg font-semibold mb-3 text-gray-700">
+            Customer Services
+          </h3>
           <ul className="space-y-2 text-gray-800 text-sm">
             <li>
               <Link to="/" className="hover:text-green-500 transition-colors">
@@ -42,17 +47,23 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/categories" className="hover:text-green-500 transition-colors">
+              <Link to="#" className="hover:text-green-500 transition-colors">
                 Categories
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-green-500 transition-colors">
+              <Link
+                to="/about"
+                className="hover:text-green-500 transition-colors"
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-green-500 transition-colors">
+              <Link
+                to="/contact"
+                className="hover:text-green-500 transition-colors"
+              >
                 Contact
               </Link>
             </li>
@@ -61,25 +72,39 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-gray-700">Quick Links</h3>
+          <h3 className="text-lg font-semibold mb-3 text-gray-700">
+            Quick Links
+          </h3>
           <ul className="space-y-2 text-gray-800 text-sm">
             <li>
-              <Link to="/login" className="hover:text-green-500 transition-colors">
+              <Link
+                to="/login"
+                className="hover:text-green-500 transition-colors"
+              >
                 Login
               </Link>
             </li>
             <li>
-              <Link to="/register" className="hover:text-green-500 transition-colors">
+              <Link
+                to="/register"
+                className="hover:text-green-500 transition-colors"
+              >
                 Register
               </Link>
             </li>
             <li>
-              <Link to="/faq" className="hover:text-green-500 transition-colors">
+              <Link
+                to="/faq"
+                className="hover:text-green-500 transition-colors"
+              >
                 FAQ
               </Link>
             </li>
             <li>
-              <Link to="/support" className="hover:text-green-500 transition-colors">
+              <Link
+                to="/support"
+                className="hover:text-green-500 transition-colors"
+              >
                 Support
               </Link>
             </li>
@@ -88,18 +113,22 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-gray-700">Contact Info</h3>
+          <h3 className="text-lg font-semibold mb-3 text-gray-700">
+            Contact Info
+          </h3>
           <ul className="text-gray-800 text-sm space-y-2">
             <li className="hover:text-green-500"> 📞 +880 1751 202 502</li>
             <li className="hover:text-green-500"> 📧 info@petpujardokar.com</li>
-            <li className="hover:text-green-500"> 📍  Dhaka, Bangladesh</li>
+            <li className="hover:text-green-500"> 📍 Dhaka, Bangladesh</li>
             <li className="hover:text-green-500"> 🕖 Mon-Fri 9am-5pm </li>
           </ul>
         </div>
 
         {/* Newsletter / Subscribe */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-gray-700">Subscribe</h3>
+          <h3 className="text-lg font-semibold mb-3 text-gray-700">
+            Subscribe
+          </h3>
           <p className="text-gray-600 text-sm mb-2">
             Get updates & alerts directly to your inbox.
           </p>
@@ -123,7 +152,8 @@ const Footer = () => {
       <div className="border-t border-gray-600 mt-8 py-6">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-4">
           <p className="text-gray-600 text-sm">
-            &copy; {new Date().getFullYear()} PetPujar Dokar. All rights reserved.
+            &copy; {new Date().getFullYear()} PetPujar Dokar. All rights
+            reserved.
           </p>
           <div className="flex gap-4 text-gray-800 text-lg">
             <Link to="#" className="hover:text-blue-500 transition-colors">

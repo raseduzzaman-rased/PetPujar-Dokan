@@ -8,13 +8,13 @@ const CartDrawer = () => {
   const { cartItems, removeFromCart, updateQty, getTotal, setShowCart } =
     useContext(DataContext);
 
-  // Subtotal হিসাব (qty x price)
+  // Subtotal (qty x price)
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.qty,
     0
   );
 
-  const deliveryFee = subtotal > 0 ? 50 : 0; // ধরলাম Rs 50 fixed delivery fee
+  const deliveryFee = subtotal > 0 ? 50 : 0; // fixed delivery fee
   const total = subtotal + deliveryFee;
 
   return (
@@ -61,8 +61,8 @@ const CartDrawer = () => {
               </button>
               <button
                 onClick={() => {
-                    removeFromCart(item.id);
-                    toast.error(`${item.food_name} removed from cart`);
+                  removeFromCart(item.id);
+                  toast.error(`${item.food_name} removed from cart`);
                 }}
                 className=" text-red-500 cursor-pointer text-2xl"
               >
