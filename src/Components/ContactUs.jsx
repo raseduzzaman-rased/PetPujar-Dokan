@@ -80,7 +80,7 @@ const ContactUs = () => {
             <div>
               <button
                 type="submit"
-                className="w-full bg-green-400 text-white font-semibold py-2 px-4 rounded-xl hover:bg-green-300 hover:text-black transition-colors"
+                className="w-full bg-green-300 text-black font-semibold py-2 px-4 rounded-xl hover:bg-green-400 hover:text-black transition-colors"
               >
                 Send Message
               </button>

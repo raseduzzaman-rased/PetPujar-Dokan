@@ -74,7 +74,7 @@ const Login = () => {
             </div>
             <button
               type="button"
-              className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50 bg-green-400 hover:bg-green-300 cursor-pointer"
+              className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50 bg-green-300 hover:bg-green-400 cursor-pointer"
             >
               Sign in
             </button>
